@@ -21,7 +21,7 @@ requirements:
   host:
     - xorg-kbproto
     - xorg-libx11
-    - xorg-libpthread-stubs
+    - pthread-stubs
 
 test:
   commands:
