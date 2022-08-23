@@ -18,6 +18,11 @@ requirements:
     - {{ compiler('c') }}
     - autoconf
     - make
+    - libtool
+    - gnuconfig
+    - automake
+    - pkg-config
+    - xorg-util-macros
   host:
     - xorg-kbproto
     - xorg-libx11
