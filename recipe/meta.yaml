@@ -10,14 +10,19 @@ source:
   sha256: 758dbdaa20add2db4902df0b1b7c936564b7376c02a0acd1f2a331bd334b38c7
 
 build:
-  number: 0
-  skip: true  # [not linux]
+  number: 1
+  skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - autoconf
     - make
+    - libtool
+    - gnuconfig
+    - automake
+    - pkg-config
+    - xorg-util-macros
   host:
     - xorg-kbproto
     - xorg-libx11
@@ -39,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - scopatz
+    - erykoff
