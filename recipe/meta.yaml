@@ -1,16 +1,16 @@
 {% set name = "libxkbfile" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://www.x.org/releases/individual/lib/{{ name }}-{{ version }}.tar.bz2
-  sha256: 758dbdaa20add2db4902df0b1b7c936564b7376c02a0acd1f2a331bd334b38c7
+  url: https://www.x.org/releases/individual/lib/{{ name }}-{{ version }}.tar.xz
+  sha256: 7f71884e5faf56fb0e823f3848599cf9b5a9afce51c90982baeb64f635233ebf
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('libxkbfile', max_pin='x') }}
